@@ -62,7 +62,7 @@ async def webdl(_, m):
         return await msg.edit('something went wrong!')
 
     shutil.make_archive(name, 'zip', base_dir=dir)
-    await m.reply_document(name+'.zip',caption="Your Code Is Ready Sir\n Your Requested Url🎁\n", url )
+    await m.reply_document(name+'.zip',caption="Your Code Is Ready Sir\n Your Requested Url🎁\n{url}" )
     
     await msg.delete()
 
